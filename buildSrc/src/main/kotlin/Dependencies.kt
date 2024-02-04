@@ -34,6 +34,7 @@ object Dependencies {
 
     object LifeCycle {
         const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModel}"
+        const val lifecycleActivity = "androidx.activity:activity-ktx:${Versions.lifecycleActivity}"
     }
 
     object Testing {
@@ -63,6 +64,7 @@ fun DependencyHandler.coroutines(){
 }
 
 fun DependencyHandler.lifecycle(){
+    implementation(Dependencies.LifeCycle.lifecycleActivity)
     implementation(Dependencies.lifecycleRuntimeKtx)
     implementation(Dependencies.LifeCycle.lifecycleViewModel)
 }
