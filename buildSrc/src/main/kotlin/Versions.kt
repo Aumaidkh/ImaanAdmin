@@ -8,6 +8,8 @@ object Versions {
     const val lottie = "6.0.1"
     const val coil = "2.5.0"
 
+    const val lifecycleViewModel = "2.4.0"
+
     // Networking
     const val ktor = "1.6.3"
     const val kotlinXSerialization = "1.3.0"
