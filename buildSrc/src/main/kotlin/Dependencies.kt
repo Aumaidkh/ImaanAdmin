@@ -32,6 +32,10 @@ object Dependencies {
         const val hiltNavigation = "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigation}"
     }
 
+    object LifeCycle {
+        const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModel}"
+    }
+
     object Testing {
         const val hilt = "com.google.dagger:hilt-android-testing:${Versions.hilt}"
         const val navigation = "androidx.navigation:navigation-testing:${Versions.navigationVersion}"
@@ -60,6 +64,7 @@ fun DependencyHandler.coroutines(){
 
 fun DependencyHandler.lifecycle(){
     implementation(Dependencies.lifecycleRuntimeKtx)
+    implementation(Dependencies.LifeCycle.lifecycleViewModel)
 }
 
 fun DependencyHandler.ktor(){
@@ -75,6 +80,7 @@ fun DependencyHandler.kotlinXSerialization(){
 fun DependencyHandler.coil(){
     implementation(Dependencies.coil)
 }
+
 
 fun DependencyHandler.compose() {
     // implementation(Dependencies.materialIcons)
