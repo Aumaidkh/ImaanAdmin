@@ -3,12 +3,14 @@ package com.imaan.imaanadmin.data.repository.order
 import com.imaan.imaanadmin.data.model.order.OrderModel
 import com.imaan.imaanadmin.data.model.order.OrderStatus
 import com.imaan.imaanadmin.data.model.order.getDummyOrderItems
+import kotlinx.coroutines.delay
 import javax.inject.Inject
 import kotlin.random.Random
 
 class OrderRepositoryImpl @Inject constructor(): IOrderRepository {
 
     override suspend fun getAllOrders(): List<OrderModel> {
+        delay(4000)
         return getDummyOrders()
     }
 

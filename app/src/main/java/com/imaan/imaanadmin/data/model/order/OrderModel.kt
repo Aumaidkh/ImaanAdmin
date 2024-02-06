@@ -8,10 +8,10 @@ data class OrderModel(
     val placedAt: Long,
 )
 
-enum class OrderStatus {
-    PENDING,
-    PLACED,
-    SHIPPED,
-    DELIVERED,
-    REJECTED
+enum class OrderStatus (val label : String){
+    PENDING("Pending"),
+    PLACED("Placed"),
+    SHIPPED("Shipped"),
+    DELIVERED("Delivered"),
+    REJECTED("Rejected")
 }

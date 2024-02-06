@@ -21,7 +21,7 @@ fun getDummyOrderItems(count: Int): List<OrderItem>{
         items.add(
             OrderItem(
                 product = getDummyProduct(),
-                quantity = it
+                quantity = if (it == 0) 1 else it
             )
         )
     }
@@ -34,7 +34,7 @@ fun getDummyProduct(): ProductModel {
             id = UUID.randomUUID().toString(),
             title = "Sony Camera",
             desc = "Camera features 100 X Zoom",
-            imageUrl = "https://images.pexels.com/photos/243757/pexels-photo-243757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            imageUrl = "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             price = 100.0f
         ),
         ProductModel(

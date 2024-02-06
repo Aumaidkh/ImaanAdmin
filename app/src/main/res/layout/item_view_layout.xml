@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    app:strokeWidth="0dp"
+    app:cardElevation="1dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp">
+
+        <View
+            android:id="@+id/indicator"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:background="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/indicator"
+            app:layout_constraintTop_toBottomOf="@id/tvAdress" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:maxLines="1"
+            tools:text="I Phone 15 pro max"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/ivImage"
+            app:layout_constraintTop_toTopOf="@id/ivImage" />
+
+        <TextView
+            android:id="@+id/tvAdress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="60dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            tools:text="24 Kadpora Achabal"
+            app:layout_constraintEnd_toStartOf="@+id/tvAmount"
+            app:layout_constraintStart_toEndOf="@id/indicator"
+            app:layout_constraintTop_toBottomOf="@+id/ivImage" />
+
+        <TextView
+            android:id="@+id/tvOrderID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="OrderID"
+            app:layout_constraintBottom_toBottomOf="@+id/tvID"
+            app:layout_constraintStart_toEndOf="@id/indicator"
+            app:layout_constraintTop_toTopOf="@+id/tvID" />
+
+        <TextView
+            android:id="@+id/tvID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:text="#27890"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:textSize="10sp"
+            android:layout_marginBottom="12dp"
+            tools:text="21/03/2024"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/indicator"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toEndOf="@+id/indicator"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrderID"
+            app:shapeAppearance="@style/CircularImage"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="$200"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAdress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvAdress" />
+
+        <TextView
+            android:id="@+id/tvTotalItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="TextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivImage"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toEndOf="@id/ivImage"
+            android:layout_marginStart="12dp" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="@+id/tvDate"
+            app:tint="@color/blue"
+            app:layout_constraintVertical_bias="0.517"
+            app:srcCompat="@drawable/arrow_right" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
