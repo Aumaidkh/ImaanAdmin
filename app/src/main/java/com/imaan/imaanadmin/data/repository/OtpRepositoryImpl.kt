@@ -3,7 +3,7 @@ package com.imaan.imaanadmin.data.repository
 import com.imaan.imaanadmin.core.utils.Result
 import com.imaan.imaanadmin.data.datasource.OTPService
 import com.imaan.imaanadmin.data.model.OTPModel
-import com.imaan.imaanadmin.data.model.UserModel
+import com.imaan.imaanadmin.data.model.user.UserModel
 import javax.inject.Inject
 
 class OtpRepositoryImpl @Inject constructor(
