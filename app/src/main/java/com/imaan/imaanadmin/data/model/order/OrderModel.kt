@@ -1,12 +1,13 @@
 package com.imaan.imaanadmin.data.model.order
 
+import com.imaan.imaanadmin.data.model.address.AddressModel
 import com.imaan.imaanadmin.data.model.user.UserModel
 
 data class OrderModel(
     val orderId: String,
     val status: OrderStatus,
     val orderItems: List<OrderItem>,
-    val address: String,
+    val address: AddressModel,
     val placedAt: Long,
     val user: UserModel,
     val deliveryCharges: Float,

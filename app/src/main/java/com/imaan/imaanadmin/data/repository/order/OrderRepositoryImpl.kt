@@ -1,5 +1,6 @@
 package com.imaan.imaanadmin.data.repository.order
 
+import com.imaan.imaanadmin.data.model.address.dummyAddress
 import com.imaan.imaanadmin.data.model.fakeUser
 import com.imaan.imaanadmin.data.model.order.OrderModel
 import com.imaan.imaanadmin.data.model.order.OrderStatus
@@ -29,7 +30,7 @@ fun getDummyOrders(count: Int = 10): List<OrderModel>{
             OrderModel(
                 orderId = it.toString(),
                 status = getOrderStatus(),
-                address = "Kadapora, Anantnag, J & K, IN, 192101",
+                address = dummyAddress,
                 placedAt = (System.currentTimeMillis() + it * 1000L),
                 orderItems = getDummyOrderItems(it),
                 user = fakeUser,
