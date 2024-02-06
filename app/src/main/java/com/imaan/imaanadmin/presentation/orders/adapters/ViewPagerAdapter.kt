@@ -9,7 +9,7 @@ import com.imaan.imaanadmin.presentation.orders.fragments.placed.FragmentPlaced
 import com.imaan.imaanadmin.presentation.orders.fragments.rejected.FragmentRejected
 import com.imaan.imaanadmin.presentation.orders.fragments.shipped.FragmentShipped
 
-class ViewPagerAdapter (activity: FragmentActivity): FragmentStateAdapter(activity){
+class ViewPagerAdapter (fragment: Fragment): FragmentStateAdapter(fragment){
 
     override fun getItemCount(): Int {
         return 5

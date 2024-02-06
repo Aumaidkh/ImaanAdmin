@@ -36,6 +36,7 @@ object Dependencies {
         const val hiltNavigation = "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigation}"
         const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navVersion}"
         const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navVersion}"
+        const val safeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navVersion}"
     }
 
     object LifeCycle {
