@@ -27,9 +27,15 @@ object Dependencies {
     const val kotlinXSerialization ="org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinXSerialization}"
 
     const val lottieCompose = "com.airbnb.android:lottie-compose:${Versions.lottie}"
+
+    object ImageLoading {
+        const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    }
     object Navigation {
         const val navigationCompose = "androidx.navigation:navigation-compose:${Versions.navigationVersion}"
         const val hiltNavigation = "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigation}"
+        const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navVersion}"
+        const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navVersion}"
     }
 
     object LifeCycle {
@@ -85,6 +91,10 @@ fun DependencyHandler.coil(){
     implementation(Dependencies.coil)
 }
 
+fun DependencyHandler.glide(){
+    implementation(Dependencies.ImageLoading.glide)
+}
+
 
 fun DependencyHandler.compose() {
     // implementation(Dependencies.materialIcons)
@@ -116,9 +126,11 @@ fun DependencyHandler.truth(){
 }
 
 fun DependencyHandler.navigation(){
-    implementation(Dependencies.Navigation.hiltNavigation)
-    implementation(Dependencies.Navigation.navigationCompose)
-    androidTestImplementation(Dependencies.Testing.navigation)
+   // implementation(Dependencies.Navigation.hiltNavigation)
+    //implementation(Dependencies.Navigation.navigationCompose)
+    implementation(Dependencies.Navigation.navigationUi)
+    implementation(Dependencies.Navigation.navigationFragment)
+ //   androidTestImplementation(Dependencies.Testing.navigation)
 }
 
 fun DependencyHandler.hilt(){
