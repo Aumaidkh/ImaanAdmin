@@ -1,7 +1,7 @@
 package com.imaan.imaanadmin.data.datasource
 
 import com.imaan.imaanadmin.core.utils.Result
-import com.imaan.imaanadmin.data.model.UserModel
+import com.imaan.imaanadmin.data.model.user.UserModel
 import com.imaan.imaanadmin.data.model.fakeUser
 import javax.inject.Inject
 

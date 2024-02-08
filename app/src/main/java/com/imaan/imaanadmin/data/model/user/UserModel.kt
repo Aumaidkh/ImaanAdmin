@@ -1,4 +1,4 @@
-package com.imaan.imaanadmin.data.model
+package com.imaan.imaanadmin.data.model.user
 
 data class UserModel(
     val id: String,

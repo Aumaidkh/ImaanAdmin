@@ -2,7 +2,7 @@ package com.imaan.imaanadmin.data.repository
 
 import com.imaan.imaanadmin.core.utils.Result
 import com.imaan.imaanadmin.data.datasource.RemoteDataSource
-import com.imaan.imaanadmin.data.model.UserModel
+import com.imaan.imaanadmin.data.model.user.UserModel
 import javax.inject.Inject
 
 class UserRepositoryImpl @Inject constructor(

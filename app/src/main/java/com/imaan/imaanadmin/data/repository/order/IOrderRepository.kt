@@ -9,5 +9,7 @@ interface IOrderRepository {
 
     suspend fun getOrderByStatus(status: OrderStatus): List<OrderModel>
 
+    suspend fun getOrderById(orderId: String): OrderModel?
+
 
 }

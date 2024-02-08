@@ -1,5 +1,7 @@
 package com.imaan.imaanadmin.data.repository.order
 
+import com.imaan.imaanadmin.data.model.address.dummyAddress
+import com.imaan.imaanadmin.data.model.fakeUser
 import com.imaan.imaanadmin.data.model.order.OrderModel
 import com.imaan.imaanadmin.data.model.order.OrderStatus
 import com.imaan.imaanadmin.data.model.order.getDummyOrderItems
@@ -17,6 +19,10 @@ class OrderRepositoryImpl @Inject constructor(): IOrderRepository {
     override suspend fun getOrderByStatus(status: OrderStatus): List<OrderModel> {
         return getAllOrders().filter { it.status == status }
     }
+
+    override suspend fun getOrderById(orderId: String): OrderModel? {
+        return getAllOrders().find { it.orderId == orderId }
+    }
 }
 
 fun getDummyOrders(count: Int = 10): List<OrderModel>{
@@ -26,9 +32,12 @@ fun getDummyOrders(count: Int = 10): List<OrderModel>{
             OrderModel(
                 orderId = it.toString(),
                 status = getOrderStatus(),
-                address = "Kadapora, Anantnag, J & K, IN, 192101",
+                address = dummyAddress,
                 placedAt = (System.currentTimeMillis() + it * 1000L),
-                orderItems = getDummyOrderItems(it)
+                orderItems = getDummyOrderItems(it),
+                user = fakeUser,
+                deliveryCharges = 40.0f,
+                discount = 10.0f
             )
         )
     }
